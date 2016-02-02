@@ -41,6 +41,8 @@ nmap <C-L> <C-W><C-L>
 "Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit ~/Dropbox/vim/vimrc.vim<cr>
 nmap <Leader>ep :tabedit ~/Dropbox/vim/plugins.vim<cr>
+nmap <Leader>pi :PluginInstall<cr>
+nmap <Leader>pu :PluginUpdate<cr>
 
 "Toggle NERDTree File Tree
 nmap <c-B> :NERDTreeToggle<cr>
