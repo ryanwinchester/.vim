@@ -10,10 +10,9 @@ let mapleader = ',' 	              "The default leader is \, but a comma is much
 set number		              "Let's activate line numbers.
 
 "--------------Visuals-------------"
-colorscheme atom-dark
+colorscheme atom-dark-256
 set guifont=Fira_Code:h15
-set linespace=15   		      "Macvim-specific line-height.
-:set cursorline
+set cursorline
 
 set guioptions-=l
 set guioptions-=L

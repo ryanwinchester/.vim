@@ -34,6 +34,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " CtrlP -----------------------------------------
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_extension = ['buffertag']
 
 " Syntastic -------------------------------------
