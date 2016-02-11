@@ -5,19 +5,28 @@ so ~/Dropbox/vim/plugins.vim
 
 "-------------General Settings--------------"
 syntax enable
-set backspace=indent,eol,start        "Make backspace behave like every other editor.
-let mapleader = ',' 	              "The default leader is \, but a comma is much better.
-set number		              "Let's activate line numbers.
+set backspace=indent,eol,start      "Make backspace behave like every other editor.
+let mapleader = ',' 	            "The default leader is \, but a comma is much better.
+set number		                    "Let's activate line numbers.
+
+
+"--------------Formatting----------"
+set nowrap                          " wrap long lines
+set autoindent                      " indent at the same level of the previous line
+set expandtab                       " tabs are spaces, not tabs
+set shiftwidth=4                    " use indents of 4 spaces
+set tabstop=4                       " an indentation every four columns
+set softtabstop=4                   " let backspace delete indent
+
 
 "--------------Visuals-------------"
+set background=dark
 colorscheme atom-dark-256
 set guifont=Fira_Code:h15
-set cursorline
+set cursorline                      " highlight current line
 
 set guioptions-=l
-set guioptions-=L
 set guioptions-=r
-set guioptions-=R
 
 
 "-------------Search--------------"

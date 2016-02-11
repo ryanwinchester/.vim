@@ -12,11 +12,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
-
+Plugin 'vim-airline/vim-airline-themes' 
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'jdkanani/vim-material-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,15 +36,31 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" CtrlP -----------------------------------------
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_extension = ['buffertag']
+	" CtrlP -----------------------------------------
+	let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+	let g:ctrlp_extension = ['buffertag']
 
-" Syntastic -------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+    	" The Silver Searcher - AG to build the index in no time!
+        let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+              \ --ignore .git
+              \ --ignore .svn
+              \ --ignore .hg
+              \ --ignore .DS_Store
+              \ --ignore "**/*.pyc"
+              \ -g ""'
+
+        " faster matcher
+        let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+	" Syntastic -------------------------------------
+	set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%*
+	let g:syntastic_always_populate_loc_list = 1
+	let g:syntastic_auto_loc_list = 1
+	let g:syntastic_check_on_open = 1
+	let g:syntastic_check_on_wq = 0
+
+    " Airline ----------------------------------------
+    let g:airline_theme = "hybrid"
+

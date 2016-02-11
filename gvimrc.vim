@@ -1,5 +1,5 @@
 
-colorscheme atom-dark
+colorscheme hybrid_material
 
 set macligatures
 set guifont=Fira_Code:h15
