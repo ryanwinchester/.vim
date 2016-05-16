@@ -68,3 +68,37 @@ augroup autosourcing
 	autocmd!
         autocmd BufWritePost vimrc.vim source %
 augroup END
+
+" Put at the very end of your .vimrc file.
+
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+"-------------Functions--------------"
+
+" PHP Syntax
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+" PHP Namespaces:
+" expand class
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>f <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>f :call PhpExpandClass()<CR>
+" import class
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+" sort imports
+autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
+autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>

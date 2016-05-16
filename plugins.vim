@@ -20,6 +20,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes' 
 Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'jdkanani/vim-material-theme'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'othree/html5.vim'
+Plugin 'jwalton512/vim-blade'
+Plugin 'posva/vim-vue'
+Plugin 'elixir-lang/vim-elixir'
+"Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
