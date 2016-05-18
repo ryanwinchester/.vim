@@ -3,8 +3,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/Dropbox/vim/bundle/Vundle.vim
-call vundle#begin('~/Dropbox/vim/bundle')
+set rtp+=~/Dropbox/.vim/gvim/bundle/Vundle.vim
+call vundle#begin('~/Dropbox/.vim/gvim/bundle')
 
 
 " let Vundle manage Vundle, required
@@ -17,9 +17,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes' 
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'jdkanani/vim-material-theme'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'othree/html5.vim'
@@ -70,4 +69,3 @@ filetype plugin indent on    " required
 
     " Airline ----------------------------------------
     let g:airline_theme = "hybrid"
-

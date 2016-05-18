@@ -1,14 +1,17 @@
 
-"--------------Vundle--------------------"
-so ~/Dropbox/vim/plugins.vim
-
-
 "-------------General Settings--------------"
 syntax enable
 set backspace=indent,eol,start      "Make backspace behave like every other editor.
 let mapleader = ',' 	            "The default leader is \, but a comma is much better.
 set number		                    "Let's activate line numbers.
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
 
 "--------------Formatting----------"
 set nowrap                          " wrap long lines
@@ -21,13 +24,7 @@ set softtabstop=4                   " let backspace delete indent
 
 "--------------Visuals-------------"
 set background=dark
-colorscheme atom-dark-256
-set guifont=Fira_Code:h15
 set cursorline                      " highlight current line
-
-set guioptions-=l
-set guioptions-=r
-
 
 "-------------Search--------------"
 set hlsearch
@@ -47,8 +44,6 @@ nmap <C-L> <C-W><C-L>
 "-------------Mappings--------------"
 
 "Make it easy to edit the Vimrc file.
-nmap <Leader>ev :tabedit ~/Dropbox/vim/vimrc.vim<cr>
-nmap <Leader>ep :tabedit ~/Dropbox/vim/plugins.vim<cr>
 nmap <Leader>pi :PluginInstall<cr>
 nmap <Leader>pu :PluginUpdate<cr>
 
@@ -60,14 +55,6 @@ nmap <c-R> :CtrlPBufTag<cr>
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 
-
-"-------------Auto-Commands--------------"
-
-"Automatically source the Vimrc file on save.
-augroup autosourcing
-	autocmd!
-        autocmd BufWritePost vimrc.vim source %
-augroup END
 
 " Put at the very end of your .vimrc file.
 
@@ -102,3 +89,10 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 " sort imports
 autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
 autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
+
+"------------Editor-specific GUI-vs-non---------"
+if has("gui_running")
+  so ~/Dropbox/.vim/gvim/gvimrc.vim
+else
+  so ~/Dropbox/.vim/vim/vimrc.vim
+endif
