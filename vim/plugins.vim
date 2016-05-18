@@ -6,9 +6,10 @@ filetype off                  " required
 set rtp+=$vim_dir/vim/bundle/Vundle.vim
 call vundle#begin($vim_dir.'/vim/bundle')
 
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
