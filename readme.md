@@ -1,14 +1,23 @@
-# Dropbox synced vim config
+# Vim config
+Separate config for vim and macvim automatically.
 
-### Clone this repository to your Dropbox folder
+## Install
 
-`git clone git@github.com:ryanwinchester/.vim ~/Dropbox/.vim`
+```
+git clone git clone git@github.com:ryanwinchester/.vim ~/.vim
+```
 
-### Update your vimrc and gvimrc files
+## Or Install Dropbox synced vim config
 
-The vimrc is for the terminal vim and the gvimrc is for macvim.
+##### Clone this repository to your Dropbox folder:
 
-#### ~/.vimrc
+```
+git clone git@github.com:ryanwinchester/.vim ~/Dropbox/.vim
+```
+
+##### Update your .vimrc file:
+
+(or copy the .vimrc.example file to ~/.vimrc)
 
 ```
 set runtimepath+=~/Dropbox/.vim
