@@ -3,8 +3,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/Dropbox/.vim/gvim/bundle/Vundle.vim
-call vundle#begin('~/Dropbox/.vim/gvim/bundle')
+set rtp+=$vim_dir/gvim/bundle/Vundle.vim
+call vundle#begin($vim_dir.'/gvim/bundle')
 
 
 " let Vundle manage Vundle, required

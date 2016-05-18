@@ -1,3 +1,6 @@
+"------------------Variables----------------"
+let $vim_dir = '~/Dropbox/.vim'
+
 
 "-------------General Settings--------------"
 syntax enable
@@ -41,7 +44,7 @@ nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
 
 
-"-------------Mappings--------------"
+"-------------General Mappings--------------"
 
 "Make it easy to edit the Vimrc file.
 nmap <Leader>pi :PluginInstall<cr>
@@ -62,6 +65,7 @@ function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine
   hi! def link phpDocParam phpType
 endfunction
+
 
 "-------------Functions--------------"
 
@@ -90,9 +94,10 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
 autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
 
+
 "------------Editor-specific GUI-vs-non---------"
 if has("gui_running")
-  so ~/Dropbox/.vim/gvim/gvimrc.vim
+  so $vim_dir/gvim/gvimrc.vim
 else
-  so ~/Dropbox/.vim/vim/vimrc.vim
+  so $vim_dir/vim/vimrc.vim
 endif

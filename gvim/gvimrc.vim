@@ -1,6 +1,6 @@
 
 "--------------Vundle--------------------"
-so ~/Dropbox/.vim/gvim/plugins.vim
+so $vim_dir/gvim/plugins.vim
 
 
 "---------------Visual-------------------"
@@ -15,8 +15,8 @@ set guioptions-=r
 
 
 "-------------Mappings--------------"
-nmap <Leader>ev :tabedit ~/Dropbox/.vim/gvim/gvimrc.vim<cr>
-nmap <Leader>ep :tabedit ~/Dropbox/.vim/gvim/plugins.vim<cr>
+nmap <Leader>ev :tabedit $vim_dir/gvim/gvimrc.vim<cr>
+nmap <Leader>ep :tabedit $vim_dir/gvim/plugins.vim<cr>
 
 
 "-------------Auto-Commands--------------"

@@ -1,6 +1,6 @@
 
 "----------------------Vundle---------------------------"
-so ~/Dropbox/.vim/vim/plugins.vim
+so $vim_dir/vim/plugins.vim
 
 
 "----------------------Visuals--------------------------"
@@ -12,8 +12,8 @@ colorscheme atom-dark-256
 
 
 "---------------------Mappings--------------------------"
-nmap <Leader>ev :tabedit ~/Dropbox/.vim/vim/vimrc.vim<cr>
-nmap <Leader>ep :tabedit ~/Dropbox/.vim/vim/plugins.vim<cr>
+nmap <Leader>ev :tabedit $vim_dir/vim/vimrc.vim<cr>
+nmap <Leader>ep :tabedit $vim_dir/vim/plugins.vim<cr>
 
 
 "-------------Auto-Commands--------------"
